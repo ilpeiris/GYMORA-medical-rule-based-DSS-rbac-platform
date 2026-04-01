@@ -38,6 +38,9 @@ require_once __DIR__ . '/../config/constants.php';
 
         <?php if ($_SESSION['role'] === ROLE_USER): ?>
             <li class="nav-item">
+                <a class="nav-link" href="<?= BASE_URL ?>user/classes.php">Book Classes</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= BASE_URL ?>user/profile.php">My Profile</a>
             </li>
         <?php endif; ?>

@@ -17,7 +17,7 @@ $stmt = $pdo->prepare("
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
 
-// Now that we have the data, load the UI header
+
 require_once '../includes/header.php';
 ?>
 
@@ -25,6 +25,18 @@ require_once '../includes/header.php';
     <div class="col-12">
         <h2 class="fw-bold">Welcome back, <?= htmlspecialchars($user['name']) ?>!</h2>
         <hr>
+
+
+<?php if (isset($_GET['msg']) && $_GET['msg'] === 'class_booked'): ?>
+            <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                <strong><i class="bi bi-check-circle"></i> Success!</strong> Your class has been successfully booked. Our DSS engine verified it is medically safe for you to attend.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+
+
+
+
     </div>
 </div>
 
