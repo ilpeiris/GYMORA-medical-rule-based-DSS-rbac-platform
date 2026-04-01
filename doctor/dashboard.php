@@ -64,14 +64,18 @@ require_once '../includes/header.php';
                                             <?php endif; ?>
                                         </td>
                                         <td class="align-middle">
-                                            <?php if ($appt['status'] == 'scheduled'): ?>
-                                                <a href="assessment.php?appointment_id=<?= $appt['appointment_id'] ?>&patient_id=<?= $appt['patient_id'] ?>" class="btn btn-sm btn-primary">
-                                                    Start Assessment
-                                                </a>
-                                            <?php else: ?>
-                                                <button class="btn btn-sm btn-secondary" disabled>Assessed</button>
-                                            <?php endif; ?>
-                                        </td>
+    <?php if ($appt['status'] == 'scheduled'): ?>
+        <a href="assessment.php?appointment_id=<?= $appt['appointment_id'] ?>&patient_id=<?= $appt['patient_id'] ?>" class="btn btn-sm btn-primary">
+            Start Assessment
+        </a>
+    <?php else: ?>
+        <button class="btn btn-sm btn-secondary" disabled>Assessed</button>
+    <?php endif; ?>
+    
+    <a href="patient_history.php?patient_id=<?= $appt['patient_id'] ?>" class="btn btn-sm btn-outline-info ms-2">
+        Patient History
+    </a>
+</td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
