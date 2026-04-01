@@ -41,6 +41,9 @@ require_once __DIR__ . '/../config/constants.php';
                 <a class="nav-link" href="<?= BASE_URL ?>user/classes.php">Book Classes</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link fw-bold text-primary" href="<?= BASE_URL ?>user/chat.php"><i class="bi bi-chat-dots"></i> Messages</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= BASE_URL ?>user/profile.php">My Profile</a>
             </li>
         <?php endif; ?>
