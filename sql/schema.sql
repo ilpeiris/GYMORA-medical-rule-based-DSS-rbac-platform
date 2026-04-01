@@ -246,3 +246,10 @@ INSERT INTO dss_rules (condition_name, exercise_id, rule_type, reason, alternati
 ('knee_injury', (SELECT id FROM exercises WHERE name='Sprint Intervals'), 'BLOCK', 'High-impact running is contraindicated.', (SELECT id FROM exercises WHERE name='Elliptical'), 2),
 ('knee_injury', (SELECT id FROM exercises WHERE name='Barbell Squat'), 'WARN', 'Ensure proper tracking of the patella. Keep weight light.', NULL, 1);
 
+-- Seed Classes with DSS Contraindication Tags
+INSERT INTO classes (name, trainer_id, datetime, duration_minutes, capacity, impact_level, contraindication_tags, location, description) VALUES
+('HIIT Blast', (SELECT id FROM users WHERE role='trainer' LIMIT 1), DATE_ADD(NOW(), INTERVAL 1 DAY), 45, 20, 'high', '["knee_injury", "cardiovascular_risk"]', 'Studio 1', 'High-intensity interval training. Fast-paced and high impact.'),
+('Morning Yoga', (SELECT id FROM users WHERE role='trainer' LIMIT 1), DATE_ADD(NOW(), INTERVAL 2 DAY), 60, 15, 'low', '[]', 'Studio 2', 'Relaxing vinyasa flow. Safe for all levels.'),
+('Heavy Lifting Club', (SELECT id FROM users WHERE role='trainer' LIMIT 1), DATE_ADD(NOW(), INTERVAL 3 DAY), 60, 10, 'high', '["hypertension", "lumbar_disc"]', 'Weight Room', 'Focus on heavy compound lifts like deadlifts and squats.'),
+('Aqua Aerobics', (SELECT id FROM users WHERE role='trainer' LIMIT 1), DATE_ADD(NOW(), INTERVAL 4 DAY), 45, 25, 'low', '[]', 'Pool', 'Zero-impact cardio in the pool.'),
+('CrossFit Intro', (SELECT id FROM users WHERE role='trainer' LIMIT 1), DATE_ADD(NOW(), INTERVAL 5 DAY), 60, 12, 'high', '["knee_injury", "lumbar_disc", "hypertension"]', 'Studio 1', 'Intense functional fitness combining lifting and gymnastics.');
