@@ -9,8 +9,25 @@ require_once __DIR__ . '/../config/constants.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gymora - Smart Gym Management</title>
+
+<!-- 1. Add this in <head> BEFORE your bootstrap link -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+
+<!-- 2. Add this AFTER bootstrap.min.css -->
+<link rel="stylesheet" href="<?= BASE_URL ?>assets/css/gymora-theme.css">
+
+
     <style>
         body { background-color: #f8f9fa; }
         .navbar-brand { font-weight: bold; color: #0d6efd !important; }
