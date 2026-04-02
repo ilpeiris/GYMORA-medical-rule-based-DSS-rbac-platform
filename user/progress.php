@@ -138,21 +138,33 @@ document.getElementById('logProgressForm').addEventListener('submit', function(e
     e.preventDefault();
     
     const formData = new FormData(this);
+    const alertBox = document.getElementById('progressAlert');
+    alertBox.innerHTML = `<div class="alert alert-info py-2">Saving...</div>`;
     
     fetch('../api/log_progress.php', {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(async response => {
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+            const textError = await response.text();
+            throw new Error("PHP Error: " + textError.substring(0, 100));
+        }
+        return response.json();
+    })
     .then(data => {
-        const alertBox = document.getElementById('progressAlert');
         if (data.status === 'success') {
-            alertBox.innerHTML = `<div class="alert alert-success py-2">Saved! Your BMI is ${data.bmi}</div>`;
+            alertBox.innerHTML = `<div class="alert alert-success py-2">Saved! Auto-calculated BMI: ${data.bmi}</div>`;
             this.reset(); // Clear the form
             loadCharts(); // Instantly redraw the charts with the new data!
         } else {
             alertBox.innerHTML = `<div class="alert alert-danger py-2">${data.message}</div>`;
         }
+    })
+    .catch(error => {
+        alertBox.innerHTML = `<div class="alert alert-danger py-2 fw-bold">System Crash:</div><div class="bg-dark text-danger p-2 small font-monospace">${error.message}</div>`;
+        console.error('AJAX Parse Error:', error);
     });
 });
 
