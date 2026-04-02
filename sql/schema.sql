@@ -321,3 +321,9 @@ INSERT INTO `exercises` (`id`, `name`, `category`, `impact_level`, `muscle_group
 (10, 'Swimming', 'cardio', 'low', 'full body', 'Zero-impact cardio', 'pool'),
 (11, 'Planks', 'strength', 'low', 'core', 'Isometric core', 'none'),
 (12, 'Elliptical', 'cardio', 'low', 'legs', 'Low-impact cardio', 'elliptical');
+
+
+
+---
+ALTER TABLE users ADD COLUMN title VARCHAR(100) DEFAULT NULL;
+ALTER TABLE users ADD COLUMN avatar VARCHAR(255) DEFAULT 'avatar-1.png';
