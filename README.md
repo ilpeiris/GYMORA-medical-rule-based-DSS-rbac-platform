@@ -489,10 +489,10 @@ After running the seed files, the following test accounts are available:
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | admin@gymora.com | password |
-| Doctor | doctor@gymora.com | password |
-| Trainer | trainer@gymora.com | password |
-| Member | member@gymora.com | password |
+| Admin | admin@demo.com | password |
+| Doctor | doctor@demo.com | password |
+| Trainer | tra@demo.com | password |
+| Member | dem@demo.com | password |
 
 > ⚠️ Change all passwords before deploying to any non-local environment.
 
