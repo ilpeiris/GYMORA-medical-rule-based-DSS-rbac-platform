@@ -498,13 +498,24 @@ After running the seed files, the following test accounts are available:
 
 ---
 
+
 ## Screenshots
 
-> *Coming soon  UI screenshots of each role portal, the DSS booking block flow, and the BI analytics dashboard.*
-
-| Member Dashboard | Doctor Assessment | Admin BI Dashboard |
+| Home | Member Dashboard | Workout Plan |
 |---|---|---|
-| `screenshot here` | `screenshot here` | `screenshot here` |
+| ![Home](screenshots/home.png) | ![Member Dashboard](screenshots/member-dashboard.png) | ![Workout Plan](screenshots/workout-plan.png) |
+
+| DSS Block | BI Dashboard | Audit Log |
+|---|---|---|
+| ![DSS Block](screenshots/dss-block.png) | ![BI Dashboard](screenshots/bi-dashboard.png) | ![Audit Log](screenshots/audit-log.png) |
+
+| Assessment Form | Trainer Builder | Chat |
+|---|---|---|
+| ![Assessment Form](screenshots/assessment-form.png) | ![Trainer Builder](screenshots/trainer-builder.png) | ![Chat](screenshots/chat.png) |
+
+| RBAC Role Portals |
+|---|
+| <img src="screenshots/role-dashboard.png" width="700"/> |
 
 ---
 
