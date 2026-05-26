@@ -1,4 +1,14 @@
 <?php
+/**
+ * Gymora — Gym Management Platform with Rule-Based DSS Engine & RBAC
+ * Author:  Isuru Lakmal Peiris
+ * GitHub:  github.com/ilpeiris
+ * License: GPL v3
+ */
+
+
+
+<?php
 // /Gymora/includes/footer.php
 ?>
 </div> <footer class="bg-dark text-light py-5 mt-5 border-top border-secondary">
@@ -37,10 +47,10 @@
         
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start text-secondary small">
-                &copy; <?= date('Y') ?> Gymora System. All rights reserved.
+                &copy; <?= date('Y') ?> Gymora — Built by <a href="https://github.com/ilpeiris" class="text-secondary" target="_blank">Isuru Lakmal Peiris</a>. All rights reserved.
             </div>
             <div class="col-md-6 text-center text-md-end text-secondary small">
-                <span class="me-3">GDPR Compliant</span> | <span class="ms-3">v1.0 (Iterative Prototype)</span>
+                <span class="me-3">GDPR Compliant</span> | <span class="ms-3">v1.0 </span>
             </div>
         </div>
     </div>
