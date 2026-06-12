@@ -1,4 +1,4 @@
-# Gymora | Rule-Based DSS Engine with RBAC, GDPR Audit Logging & BI Dashboard
+# Gymora |  Medical-Integrated, Gym Platform with Rule-Based DSS Engine with RBAC, GDPR Audit Logging & BI Dashboard
 
 ![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=flat-square&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white)
