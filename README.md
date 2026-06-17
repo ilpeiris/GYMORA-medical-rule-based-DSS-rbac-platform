@@ -7,6 +7,14 @@
 ![License](https://img.shields.io/badge/License-GPL%20v3-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
+
+<p align="center">
+  <img src="https://img.magnific.com/free-photo/athlete-playing-sport-with-hand-drawn-doodles_23-2150036348.jpg?semt=ais_hybrid&w=740&q=80"
+       alt="Banner"
+       width="900">
+</p>
+
+
 > A full-stack PHP 8 / MySQL platform built around a deterministic Rule-Based Decision 
 Support System (DSS) engine, a four-tier RBAC architecture, AES-256 encrypted data 
 pipelines, automated GDPR audit logging, and a Chart.js-powered Business Intelligence 
